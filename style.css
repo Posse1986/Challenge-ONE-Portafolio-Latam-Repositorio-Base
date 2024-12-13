@@ -1,0 +1,399 @@
+/* Variables globales */
+:root {
+    --color-de-fondo: #FFFFFF;
+    --color-de-fondo-menu: #fdfdfd;
+    --color-de-link: #1b57a5;
+    --color-destacado: #4caf50;
+    --color-sobre-mi: #e0f7fa;
+    --color-pie-de-pagina: #333;
+    --color-navegacion: #f0f0f0;
+    --color-lista-navegacion:  #333;
+    --color-para-lista:  #999;
+}
+
+body {
+    background-color: var(--color-de-fondo);
+    font-family: 'Roboto', sans-serif;
+    margin: 3%;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 1.6;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-de-link);
+}
+
+a:hover {
+    color: var(--color-destacado);
+    text-decoration: underline;
+}
+
+/* ------------------------------ Sección Menú -------------------------------*/
+.cabecera {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: var(--color-de-fondo-menu);
+    box-shadow: 0 4px 8px;
+}
+
+.cabecera__logo {
+    max-width: 100px;
+    border-radius: 100px;
+}
+
+.cabecera__titulo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navegacion__lista {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 10;
+}
+
+.navegacion__lista a {
+    padding: 0.3rem 0.8rem; 
+    background-color: var(--color-navegacion);
+    color: var(--color-lista-navegacion);
+    text-decoration: none; 
+    border-radius: 4px; 
+    transition: all 0.2s ease; 
+}
+
+.navegacion__lista a:hover {
+    background-color: var(--color-de-fondo-menu);
+    border-color: var(--color-para-lista);
+    color: var(--color-pie-de-pagina); 
+}
+
+.navegacion__elemento a {
+    font-size: 1rem;
+}
+
+/* ------------------------------ Sección Presentación ------------------------------*/
+.presentacion {
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: stretch;
+    padding: 1rem;
+}
+
+.presentacion__subtitulo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    padding-right: 2rem;
+}
+
+.presentacion__foto {
+    border-radius: 100%; /* Hace que la imagen sea perfectamente circular */
+    border: 2px solid var(--color-sobre-mi); /* Añade un borde elegante */
+}
+
+
+.redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; /* Espaciado uniforme entre los ítems */
+    list-style: none; /* Elimina los estilos predeterminados de lista */
+    padding: 0;
+}
+
+.redes__item {
+    display: flex;
+    flex-direction: column; /* Alinea el logo encima del texto */
+    align-items: center; /* Centra horizontalmente los elementos */
+    text-align: center; /* Alinea el texto al centro */
+    font-weight: bold; /* Destaca el texto */
+}
+
+.redes__item a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: inherit; /* Mantiene el color de texto definido globalmente */
+}
+
+.redes__logo {
+    max-width: 60px; /* Controla el tamaño de los logos */
+    height: auto; /* Mantiene las proporciones */
+}
+
+
+/* ------------------------------ Sección sobre mí ----------------------------------*/
+.sobre-mi {
+    background-color: var(--color-sobre-mi);
+    padding: 2rem;
+    box-shadow: 0 4px 8px;
+    border-radius: 8px;
+}
+
+/* ------------------------------ Sección de Habilidades ------------------------------*/
+.aficiones__lista {
+    display: flex;
+    justify-content: space-around; /* Espaciado entre elementos */
+    align-items: center; /* Alinear verticalmente si es necesario */
+    background-color: var(--color-de-fondo-menu);
+    padding: 1rem;
+}
+
+.aficiones__elemento {
+    display: flex;
+    flex-direction: column; /* Alinear elementos verticalmente dentro de cada elemento */
+    align-items: center; /* Centrar los elementos horizontalmente */
+    text-align: center; /* Centrar el texto */
+}
+
+.aficiones__icono {
+    max-width: 100%; /* Ajustar el tamaño de las imágenes */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+    box-shadow: 0 4px 8px;
+    border-radius: 100px;
+}
+
+.aficiones__nombre {
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: bold; /* Hacer el texto en negrita */
+}
+
+.aficiones__titulo {
+    text-align: center; /* Centra el título de la sección */
+    font-size: 24px; /* Tamaño del título */
+    font-weight: bold; /* Resalta el título */
+    margin-bottom: 30px; /* Espaciado entre el título y la lista */
+    padding: 2rem;
+}
+/* ------------------------------ Sección de Aficiones --------------------------------*/
+.habilidades__lista {
+    display: flex;
+    justify-content: space-around; /* Espaciado entre elementos */
+    align-items: center; /* Alinear verticalmente si es necesario */
+    background-color: var(--color-de-fondo-menu);
+    padding: 1rem;
+}
+
+.habilidades__elemento {
+    display: flex;
+    flex-direction: column; /* Alinear elementos verticalmente dentro de cada elemento */
+    align-items: center; /* Centrar los elementos horizontalmente */
+    text-align: center; /* Centrar el texto */
+}
+
+.habilidades__icono {
+    max-width: 100%; /* Ajustar el tamaño de las imágenes */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+    box-shadow: 0 4px 8px;
+    border-radius: 100px;
+}
+
+.habilidades__nombre {
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: bold; /* Hacer el texto en negrita */
+}
+
+.habilidades__titulo {
+    text-align: center; /* Centra el título de la sección */
+    font-size: 24px; /* Tamaño del título */
+    font-weight: bold; /* Resalta el título */
+    margin-bottom: 30px; /* Espaciado entre el título y la lista */
+    padding: 2rem;
+}
+
+
+/* ------------------------------ Sección de Formación académica -----------------------*/
+.formacion__lista {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+.formacion__titulo {
+    text-align: center; /* Centra el título de la sección */
+    font-size: 24px; /* Tamaño del título */
+    font-weight: bold; /* Resalta el título */
+    margin-bottom: 30px; /* Espaciado entre el título y la lista */
+    padding: 2rem;
+}
+
+/* ------------------------------ Sección de Proyectos --------------------------------*/
+.proyectos__contenedor {
+    background-color: var(--color-de-fondo);
+    padding: 2rem;
+}
+
+.proyectos__contenedor1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.proyectos__nombre1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.proyectos__titulo {
+    text-align: center; /* Centra el título de la sección */
+    font-size: 24px; /* Tamaño del título */
+    font-weight: bold; /* Resalta el título */
+    margin-bottom: 30px; /* Espaciado entre el título y la lista */
+    padding: 2rem;
+}
+/* ------------------------------ Footer ---------------------------------------------*/
+.pie-de-pagina {
+    background-color: var(--color-pie-de-pagina);
+    color: #fff;
+    text-align: center;
+    padding: 0%;
+    font-size: 0.9rem;
+}
+
+/* ------------------------------ Sección de Contacto ---------------------------------*/
+.contacto__titulo {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #464646;
+}
+.contacto__formulario {
+    display: flex;
+    flex-direction: column;
+}
+.contacto__texto {
+    font-size: 1rem;
+    color: #464646;
+    font-weight: 500;
+}
+.contacto__label {
+    color: #a2a2a2;
+    font-size: 0.75rem;
+}
+.contacto__label:focus {
+    color: #2a7ae4;
+}
+.contacto__campo {
+    border: none;
+    border-bottom: solid 1px #c8c8c8;
+    height: 20px;
+    margin-bottom: 32px;
+}
+.contacto__campo:focus {
+    outline: none;
+    border-bottom: solid 1px #2a7ae4;
+}
+
+.contacto__campo--textarea {
+    height: 8.3125rem;
+}
+.contacto__boton {
+    background-color: #2a7ae4;
+    height: 2.5rem;
+    width: 133px;
+    border-radius: 4px;
+    color: white;
+}
+.contacto__boton:hover {
+    background-color: #2a7be4cb;
+}
+
+img, .presentacion__foto, .redes__logo, .habilidades__icono, .aficiones__icono {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+/* ------------------------------ Responsividad ---------------------------------------*/
+/* Teléfonos de menos de 480px */
+@media (max-width: 480px) {
+    .cabecera {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .cabecera__titulo {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .navegacion__lista {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .redes {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+        padding: 0;
+    }
+
+    .presentacion {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .presentacion__subtitulo {
+        font-size: medium;
+        padding-right: 0;
+    }
+
+    .habilidades__lista, .aficiones__lista, .formacion__lista {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+/* Tablets (entre 480px y 1024px) */
+@media (min-width: 480px) and (max-width: 1024px) {
+    .cabecera {
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    .cabecera__titulo {
+        font-size: 1.5rem;
+    }
+
+    .habilidades__lista {
+        gap: 1rem;
+    }
+
+    .presentacion {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem;
+    }
+}
+
+/* Pantallas grandes (más de 1440px) */
+@media (min-width: 1440px) {
+    .cabecera__titulo {
+        font-size: 2rem;
+    }
+
+    .presentacion__subtitulo {
+        font-size: 1.5rem;
+    }
+
+    .habilidades__lista, .aficiones__lista {
+        gap: 3rem;
+    }
+
+    .pie-de-pagina {
+        font-size: 1.2rem;
+    }
+}
+
